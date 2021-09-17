@@ -7,16 +7,18 @@ public class Reservation {
         private LocalTime time;
         private int reservationHours;
         private int tableID;
+        private String personTelephoneNumber;
 
         public Reservation() {
         }
 
-        public Reservation(int ID, LocalDate date, LocalTime time, int reservationHours, int tableID) {
+        public Reservation(int ID, LocalDate date, LocalTime time, int reservationHours, int tableID, String personTelephoneNumber) {
                 this.ID = ID;
                 this.date = date;
                 this.time = time;
                 this.reservationHours = reservationHours;
                 this.tableID = tableID;
+                this.personTelephoneNumber = personTelephoneNumber;
         }
 
         @Override
@@ -27,6 +29,7 @@ public class Reservation {
                         ", time=" + time +
                         ", reservationHours=" + reservationHours +
                         ", tableID=" + tableID +
+                        ", personTelephoneNumber='" + personTelephoneNumber + '\'' +
                         '}';
         }
 
@@ -68,5 +71,13 @@ public class Reservation {
 
         public void setTableID(int tableID) {
                 this.tableID = tableID;
+        }
+
+        public String getPersonTelephoneNumber() {
+                return personTelephoneNumber;
+        }
+
+        public void setPersonTelephoneNumber(String personTelephoneNumber) {
+                this.personTelephoneNumber = personTelephoneNumber;
         }
 }
